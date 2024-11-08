@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Échecs - Guide Complet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    <style>
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in {
+        animation: fadeIn 1s ease-out;
+      }
+      .chess-piece {
+        transition: transform 0.3s ease;
+      }
+      .chess-piece:hover {
+        transform: scale(1.1);
+      }
+    </style>
+      <meta name="description" content="Découvrez l'art des echecs avec symetrik.xyz !">
+</head>
+  <body class="bg-gray-50">
+    <nav class="bg-gradient-to-r from-blue-600 to-purple-600 h-20 flex items-center justify-between px-8 shadow-lg fixed w-full top-0 z-50 transition-all duration-300">
+  <a href="./" data-index-id="672e1e01b297cd61cc40400e" id="index-link" class="text-white text-xl font-bold hover:scale-105 transform transition-transform duration-200 flex items-center">
+    <svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path strokelinecap="round" strokelinejoin="round" strokewidth="2" d="M9 5l7 7-7 7"></path>
+    </svg>
+    Accueil
+  </a>
+  <div class="flex gap-8">
+    <a href="#histoire" class="text-white hover:text-yellow-300 transform hover:scale-110 transition-all duration-200 relative group">
+      Histoire
+      <span class="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-300 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
+    </a>
+    <a href="#regles" class="text-white hover:text-yellow-300 transform hover:scale-110 transition-all duration-200 relative group">
+      Règles
+      <span class="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-300 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
+    </a>
+    <a href="#strategies" class="text-white hover:text-yellow-300 transform hover:scale-110 transition-all duration-200 relative group">
+      Stratégies
+      <span class="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-300 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
+    </a>
+    <a href="#ouvertures" class="text-white hover:text-yellow-300 transform hover:scale-110 transition-all duration-200 relative group">
+      Ouvertures
+      <span class="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-300 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
+    </a>
+  </div>
+</nav>
+
+    <header class="relative pt-32 pb-24 overflow-hidden bg-gradient-to-r from-blue-800 via-indigo-700 to-purple-800 text-white text-center animate-fade-in">
+  <div class="absolute inset-0">
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1529699211952-734e80c4d42b?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2MjU1MDF8MHwxfHNlYXJjaHw0fHxjaGVzc3xlbnwwfDB8fHwxNzMxMDgyMTk0fDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080')] opacity-20 bg-cover bg-center"></div>
+    
+  </div>
+  <div class="relative z-10 max-w-6xl mx-auto px-4">
+    <h1 class="text-6xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-200 animate-pulse">
+      L'Art des Échecs
+    </h1>
+    <p class="text-2xl font-light mb-8 max-w-2xl mx-auto leading-relaxed">
+      Découvrez le jeu des rois, roi des jeux
+    </p>
+    <div class="flex justify-center gap-8 mt-12">
+      <div class="animate-float">
+        <img src="https://images.unsplash.com/photo-1490383559880-5003a7baa963?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2MjU1MDF8MHwxfHNlYXJjaHwxMnx8Y2hlc3N8ZW58MHwwfHx8MTczMTA4MjE5NHww&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080" alt="Chess piece 1" class="w-20 h-20 opacity-75 rounded-xl">
+      </div>
+      <div class="animate-float-delayed">
+        <img src="https://images.unsplash.com/photo-1523875194681-bedd468c58bf?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2MjU1MDF8MHwxfHNlYXJjaHw1fHxjaGVzc3xlbnwwfDB8fHwxNzMxMDgyMTk0fDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080" alt="Chess piece 2" class="w-20 h-20 opacity-75 rounded-xl">
+      </div>
+      <div class="animate-float">
+        <img src="https://images.unsplash.com/photo-1547022145-dfc3f3e1bc03?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w2MjU1MDF8MHwxfHNlYXJjaHw4fHxjaGVzc3xlbnwwfDB8fHwxNzMxMDgyMTk0fDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080" alt="Chess piece 3" class="w-20 h-20 opacity-75 rounded-xl">
+      </div>
+    </div>
+  </div>
+  <div class="absolute bottom-0 left-0 right-0">
+    <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white"></path>
+    </svg>
+  </div>
+  <style>
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
+    .animate-float-delayed {
+      animation: float 3s ease-in-out 1.5s infinite;
+    }
+  </style>
+</header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8">
+      <section id="histoire" class="mb-16 animate-fade-in">
+        <h2 class="text-3xl font-bold mb-6 text-gray-800">Histoire des Échecs</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-semibold mb-4">Origines</h3>
+            <p class="text-gray-600">Les échecs trouvent leur origine en Inde au VIe siècle sous le nom de Chaturanga. Le jeu s'est ensuite propagé vers la Perse, puis vers le monde arabe et l'Europe.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-semibold mb-4">Évolution</h3>
+            <p class="text-gray-600">Au fil des siècles, les règles ont évolué pour donner naissance au jeu moderne que nous connaissons aujourd'hui.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="regles" class="mb-16 animate-fade-in">
+        <h2 class="text-3xl font-bold mb-6 text-gray-800">Règles Fondamentales</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="chess-piece bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-semibold mb-4">Le Roi <i class="fas fa-chess-king text-blue-500"></i></h3>
+            <p class="text-gray-600">Se déplace d'une case dans toutes les directions. Le but du jeu est de mettre le roi adverse en échec et mat.</p>
+          </div>
+          <div class="chess-piece bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-semibold mb-4">La Dame <i class="fas fa-chess-queen text-blue-500"></i></h3>
+            <p class="text-gray-600">La pièce la plus puissante, peut se déplacer dans toutes les directions sur un nombre illimité de cases.</p>
+          </div>
+          <div class="chess-piece bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-semibold mb-4">Les Pions <i class="fas fa-chess-pawn text-blue-500"></i></h3>
+            <p class="text-gray-600">Avancent d'une case à la fois vers l'avant, capturent en diagonale.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="strategies" class="mb-16 animate-fade-in">
+        <h2 class="text-3xl font-bold mb-6 text-gray-800">Stratégies Avancées</h2>
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-semibold mb-4">Principes Stratégiques</h3>
+          <ul class="list-disc pl-6 space-y-4 text-gray-600">
+            <li>Contrôlez le centre de l'échiquier</li>
+            <li>Développez vos pièces rapidement</li>
+            <li>Protégez votre roi</li>
+            <li>Créez des faiblesses dans la position adverse</li>
+            <li>Planifiez vos attaques</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="ouvertures" class="mb-16 animate-fade-in">
+        <h2 class="text-3xl font-bold mb-6 text-gray-800">Ouvertures Célèbres</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-semibold mb-4">Défense Sicilienne</h3>
+            <p class="text-gray-600">1.e4 c5 - Une des ouvertures les plus populaires et agressives pour les noirs.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-semibold mb-4">Gambit de la Dame</h3>
+            <p class="text-gray-600">1.d4 d5 2.c4 - Une ouverture classique visant à contrôler le centre.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <p>Développez votre passion pour les échecs</p>
+      </div>
+    </footer>
+  </body>
+</html>
